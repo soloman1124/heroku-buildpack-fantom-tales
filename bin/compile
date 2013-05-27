@@ -66,6 +66,10 @@ echo "done"
 echo ""
 fan -version 2>&1 | sed -u 's/^/       /'
 echo ""
+
+echo "-----> Install Tales Framwork..."
+fanr install -y -r http://repo.talesframework.org:9000 tales
+echo ""
  
 echo "-----> Calling Build Target: herokuPreCompile..."
 fan $OPT_DIR/callBuildTarget.fan $BUILD_DIR/build.fan herokuPreCompile 2>&1 | sed -u 's/^/       /'
