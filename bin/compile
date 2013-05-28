@@ -7,6 +7,7 @@ set -e
 # absolute path
 BIN_DIR=$(cd $(dirname $0); pwd)
 OPT_DIR=$(cd $BIN_DIR/../opt; pwd)
+RES_DIR=$(cd $BIN_DIR/../res; pwd)
 
 # parse args
 BUILD_DIR=$1
@@ -61,6 +62,11 @@ mv fantom-$FAN_VERSION $FAN_HOME
 
 rm fantom-$FAN_VERSION.zip
 echo "done"
+
+# make mysql jdbc connector driver available to fantom 
+echo "-----> Install mysql JDBC driver..."
+mv $RES_DIR/mysql-connector-java-5.1.25-bin.jar $FAN_HOME/lib/java/ext/
+echo ""
 
 # print fantom version details to prove it works
 echo ""
