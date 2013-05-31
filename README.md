@@ -11,7 +11,9 @@ The following modifications are made to support [Tales](http://www.talesframewor
 
 * Install the Tales pod (http://repo.talesframework.org:9000) before executing *herokuPreCompile*. It is because Tales require *build.fan* to have *tales.pod* imported before executing, and therefore the *tales.pod* have to be installed first.
 * Install the mysql java driver:
-    mysql-connector-java-5.1.25-bin.jar
+
+        mysql-connector-java-5.1.25-bin.jar
+  
   so that the connection to mysql could work.
 
 
